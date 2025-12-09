@@ -71,9 +71,7 @@ Image 39: There are five fingers in this image.<br>
 Image 40: The image shows a hand with five fingers.<br>
 
 
-2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. <br><br>
-
-First, we can visualize the last two layers of encoder of LLAVA.<br>
+2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. First, we can visualize the last two layers of encoder of the vision-language backbone of LLAVA (Instead of the vision tower).<br>
 Layer 31<br>
 <img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/e9cf2a88-1f1f-4bd6-9848-58e89fe5cc4f" /><br>
 Layer 30<br>
