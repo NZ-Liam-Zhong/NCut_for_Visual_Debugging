@@ -29,46 +29,46 @@ Traditionally, we might attribute this failure to insufficient training data or 
 
 Human: How many fingers are there? <br>
 AI: <br>
-Image 1: The image shows a hand with five fingers.
-Image 2: The image shows a hand with four fingers extended.
-Image 3: The image shows a hand with five fingers.
-Image 4: The image shows a hand with five fingers.
-Image 5: There are five fingers in the image.
-Image 6: The image shows a hand with five fingers.
-Image 7: The image shows a hand with five fingers.
-Image 8: The image shows a hand with five fingers.
-Image 9: The image shows a person's hands with their fingers spread out. However, without more specific information, it is not possible to determine the exact number of fingers in the image.
-Image 10: There are a total of 16 fingers in the image.
-Image 11: The image shows a hand with five fingers.
-Image 12: The image shows a hand with four fingers extended upwards.
-Image 13: The image shows two hands, each with five fingers. So, there are a total of 10 fingers in the image.
-Image 14: The image shows two hands reaching towards each other, but the exact number of fingers is not visible.
-Image 15: The image shows a hand with five fingers.
-Image 16: The image shows two hands with a total of ten fingers.
-Image 17: There are a total of 10 fingers in the image, with each hand having five fingers.
-Image 18: In the image, there are a total of 12 fingers visible.
-Image 19: There are ten fingers in this image.
-Image 20: There are a total of 10 fingers in the image.
-Image 21: In the image, there are four fingers visible.
-Image 22: In the image, there are a total of 10 fingers visible.
-Image 23: The image shows a hand with four fingers extended.
-Image 24: The image shows two hands, each with five fingers. So, there are a total of ten fingers in the image.
-Image 25: The image shows a hand with five fingers.
-Image 26: The image shows a hand with five fingers.
-Image 27: The image shows a hand with five fingers.
-Image 28: There are five fingers in this image.
-Image 29: There are four fingers in this image.
-Image 30: The image shows a hand with five fingers.
-Image 31: The image shows a hand with five fingers.
-Image 32: The image shows a hand with four fingers extended.
-Image 33: The image shows a hand with five fingers.
-Image 34: The image shows a hand with four fingers.
-Image 35: The image shows two hands clasped together, which means there are a total of 10 fingers.
-Image 36: The image shows a hand with five fingers.
-Image 37: The image shows a hand with five fingers.
-Image 38: The image shows a hand with five fingers.
-Image 39: There are five fingers in this image.
-Image 40: The image shows a hand with five fingers.
+Image 1: The image shows a hand with five fingers.<br>
+Image 2: The image shows a hand with four fingers extended.<br>
+Image 3: The image shows a hand with five fingers.<br>
+Image 4: The image shows a hand with five fingers.<br>
+Image 5: There are five fingers in the image.<br>
+Image 6: The image shows a hand with five fingers.<br>
+Image 7: The image shows a hand with five fingers.<br>
+Image 8: The image shows a hand with five fingers.<br>
+Image 9: The image shows a person's hands with their fingers spread out. However, without more specific information, it is not possible to determine the exact number of fingers in the image.<br>
+Image 10: There are a total of 16 fingers in the image.<br>
+Image 11: The image shows a hand with five fingers.<br>
+Image 12: The image shows a hand with four fingers extended upwards.<br>
+Image 13: The image shows two hands, each with five fingers. So, there are a total of 10 fingers in the image.<br>
+Image 14: The image shows two hands reaching towards each other, but the exact number of fingers is not visible.<br>
+Image 15: The image shows a hand with five fingers.<br>
+Image 16: The image shows two hands with a total of ten fingers.<br>
+Image 17: There are a total of 10 fingers in the image, with each hand having five fingers.<br>
+Image 18: In the image, there are a total of 12 fingers visible.<br>
+Image 19: There are ten fingers in this image.<br>
+Image 20: There are a total of 10 fingers in the image.<br>
+Image 21: In the image, there are four fingers visible.<br>
+Image 22: In the image, there are a total of 10 fingers visible.<br>
+Image 23: The image shows a hand with four fingers extended.<br>
+Image 24: The image shows two hands, each with five fingers. So, there are a total of ten fingers in the image.<br>
+Image 25: The image shows a hand with five fingers.<br>
+Image 26: The image shows a hand with five fingers.<br>
+Image 27: The image shows a hand with five fingers.<br>
+Image 28: There are five fingers in this image.<br>
+Image 29: There are four fingers in this image.<br>
+Image 30: The image shows a hand with five fingers.<br>
+Image 31: The image shows a hand with five fingers.<br>
+Image 32: The image shows a hand with four fingers extended.<br>
+Image 33: The image shows a hand with five fingers.<br>
+Image 34: The image shows a hand with four fingers.<br>
+Image 35: The image shows two hands clasped together, which means there are a total of 10 fingers.<br>
+Image 36: The image shows a hand with five fingers.<br>
+Image 37: The image shows a hand with five fingers.<br>
+Image 38: The image shows a hand with five fingers.<br>
+Image 39: There are five fingers in this image.<br>
+Image 40: The image shows a hand with five fingers.<br>
 
 
 2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. <br><br>
