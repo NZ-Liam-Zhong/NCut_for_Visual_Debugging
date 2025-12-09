@@ -13,9 +13,9 @@ This massive speedup allows us to solve million-scale graphs in mere millisecond
 
 Foundation models, such as LLaMA, are prone to hallucinations. A classic example is showing a model an image of a hand with five fingers and asking, "How many fingers?"—the model might confidently answer "four" or "six."
 
-<img width="476" height="312" alt="image" src="https://github.com/user-attachments/assets/d67012e9-6a66-4f3f-b68a-56b6e473ccb8" />
-Human: How many fingers are there?
-AI(LLAVA): There are four fingers in this image.
+<img width="476" height="312" alt="image" src="https://github.com/user-attachments/assets/d67012e9-6a66-4f3f-b68a-56b6e473ccb8" /><br>
+Human: How many fingers are there?<br>
+AI(LLAVA): There are four fingers in this image.<br>
 
 Traditionally, we might attribute this failure to insufficient training data or a need for more epochs. However, **Visual Debugging** offers a more granular diagnosis. By applying NCut to visualize the internal feature representations layer by layer, we can pinpoint exactly *where* the model "loses sight" of the concept. We might observe that in early layers, the five distinct fingers are clearly separated in the spectral embedding, but in deeper layers, the features blur or merge, leading to the incorrect output.
 
@@ -25,10 +25,10 @@ Traditionally, we might attribute this failure to insufficient training data or 
 
 1. Curate a batch of similar photos that expose the suspected failure mode, then run batched Nyström NCut on that batch. For example, if LLaVA miscounts fingers, collect hands with different finger counts and segment them together; inspect how cluster colors change under these controlled variations. <br>
 
-<img width="2688" height="1680" alt="image" src="https://github.com/user-attachments/assets/d1dd2903-daa8-4c39-b5e9-994754015f02" />
+<img width="2688" height="1680" alt="image" src="https://github.com/user-attachments/assets/d1dd2903-daa8-4c39-b5e9-994754015f02" /><br>
 
 Human: How many fingers are there? <br>
-AI:<br>
+AI: <br>
 Image 1: The image shows a hand with five fingers.
 Image 2: The image shows a hand with four fingers extended.
 Image 3: The image shows a hand with five fingers.
@@ -84,7 +84,7 @@ It seems that the colour of fingers or hands both won't change in different imag
 
 3. Trace across layers (and submodules when the model has multiple parts). For multi-branch systems like LLaVA, separately inspect the vision tower and the vision-language backbone to localize which component fails to preserve the relevant structure.<br>
 
-LLAVA has a 3-crop process in vision tower. The image below is the visualization results of layer 15 (Image 1~3 are from the 1th hand image, Image 4~6 are from the 2th hand image, ...) <br>
+LLAVA has a 3-crop process in vision tower. The image below is the visualization results of layer 15 (Image 1,2,3 are from the 1th hand image, Image 4,5,6 are from the 2th hand image, ...) <br>
 <img width="3549" height="6680" alt="image" src="https://github.com/user-attachments/assets/97879d74-9942-4cde-aa62-35425e3c8429" /><br>
 Compared with the LLAVA's text answers above, we can see that the changes of colour contribute mostly to the change of text. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
 
