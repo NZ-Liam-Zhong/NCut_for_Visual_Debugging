@@ -73,7 +73,7 @@ Image 40: The image shows a hand with five fingers.<br>
 
 2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. First, we can visualize the  results of layer 4 of vision-language backbone of LLAVA (the text tokens can get information from the image tokens in every single layer of vision-language backbone, not necessarily only the last feature).<br>
 <img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/d64c6469-ac80-49eb-9348-f0e492d02cfe" /><br>
-Compared with the LLAVA's text answers below, we can see that the changes of colour contribute mostly to the change of text *(Pink -> AI predict 5)*. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
+Compared with the LLAVA's text answers below, we can see that the changes of colour contribute mostly to the change of text **(Pink -> AI predict 5)**. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
 ### Finger numbers predicted by AI
 | Row \ Col | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
