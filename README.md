@@ -87,8 +87,7 @@ Compared with the LLAVA's text answers below, we can see that the changes of col
 3. Trace across layers (and submodules when the model has multiple parts). For multi-branch systems like LLaVA, separately inspect the vision tower and the vision-language backbone to localize which component fails to preserve the relevant structure.<br>
 
 LLAVA has a 3-crop process in vision tower (Image 1,2,3 are all from the 1th hand picture, Image 4,5,6 are all from the 2nd hand picture, ...). The image below is the visualization results of the last layer of vision tower. We can see that even the output of vision tower doesn't have significant colour changes relevant with the numbers of the fingers. <br>
-<img width="3549" height="6680" alt="image" src="https://github.com/user-attachments/assets/47e1c945-afed-4c55-82f6-29452f97d6bb" />
-<br>
+<img width="3588" height="6771" alt="image" src="https://github.com/user-attachments/assets/28a7dc97-93c9-429d-89a6-4d82803dd984" /><br>
 
 
 
