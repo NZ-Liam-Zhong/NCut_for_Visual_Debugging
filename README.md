@@ -83,8 +83,16 @@ It seems that the colour of fingers or hands both won't change in different imag
 3. Trace across layers (and submodules when the model has multiple parts). For multi-branch systems like LLaVA, separately inspect the vision tower and the vision-language backbone to localize which component fails to preserve the relevant structure.<br>
 
 LLAVA has a 3-crop process in vision tower. The image below is the visualization results of layer 15 (Image 1,2,3 are from the 1th hand image, Image 4,5,6 are from the 2th hand image, ...) <br>
-<img width="3549" height="6680" alt="image" src="https://github.com/user-attachments/assets/97879d74-9942-4cde-aa62-35425e3c8429" /><br>
+<img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/d64c6469-ac80-49eb-9348-f0e492d02cfe" /><br>
 Compared with the LLAVA's text answers above, we can see that the changes of colour contribute mostly to the change of text. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
+### Image Data Matrix (8x5)
+| Row \ Col | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **01-08** | 5 Fingers | 4 Extended | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers |
+| **09-16** | Unknown | 16 Fingers | 5 Fingers | 4 Upwards | 10 (2 Hands) | Unknown | 5 Fingers | 10 Total |
+| **17-24** | 10 Total | 12 Visible | 10 Fingers | 10 Fingers | 4 Visible | 10 Visible | 4 Extended | 10 (2 Hands)|
+| **25-32** | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 4 Fingers | 5 Fingers | 5 Fingers | 4 Extended |
+| **33-40** | 5 Fingers | 4 Fingers | 10 (Clasped)| 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers |
 
 
 
