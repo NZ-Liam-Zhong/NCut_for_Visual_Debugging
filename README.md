@@ -71,21 +71,10 @@ Image 39: There are five fingers in this image.<br>
 Image 40: The image shows a hand with five fingers.<br>
 
 
-2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. First, we can visualize the last two layers of encoder of the vision-language backbone of LLAVA (Instead of the vision tower).<br>
-Layer 31<br>
-<img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/e9cf2a88-1f1f-4bd6-9848-58e89fe5cc4f" /><br>
-Layer 30<br>
-<img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/c73a3b86-b54f-4340-8d21-84f68590db50" /><br>
-It seems that the colour of fingers or hands both won't change in different images. But we still don't know what happen and what makes the AI answer wrongly in different settings. It seems that we should go in to details of the vision tower.
-
-
-
-3. Trace across layers (and submodules when the model has multiple parts). For multi-branch systems like LLaVA, separately inspect the vision tower and the vision-language backbone to localize which component fails to preserve the relevant structure.<br>
-
-LLAVA has a 3-crop process in vision tower. The image below is the visualization results of layer 15 (Image 1,2,3 are from the 1th hand image, Image 4,5,6 are from the 2th hand image, ...) <br>
+2. Analyze per layer with the entire batch side by side. If a small perturbation in one photo causes color shifts only in that case, the model is highly sensitive to that factor. If colors stay stable across the batch despite perturbations, the model is insensitive to that semantic cue. First, we can visualize the  results of layer 4 of vision-language backbone of LLAVA (the text tokens can get information from the image tokens in every single layer of vision-language backbone, not necessarily only the last feature).<br>
 <img width="3545" height="2212" alt="image" src="https://github.com/user-attachments/assets/d64c6469-ac80-49eb-9348-f0e492d02cfe" /><br>
-Compared with the LLAVA's text answers above, we can see that the changes of colour contribute mostly to the change of text. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
-### Image Data Matrix (8x5)
+Compared with the LLAVA's text answers below, we can see that the changes of colour contribute mostly to the change of text. And it's the gestures of hands instead of the number of fingers of the hand makes the changes in colour. 
+### Finger numbers predicted by AI
 | Row \ Col | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **01-08** | 5 Fingers | 4 Extended | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers |
@@ -93,6 +82,16 @@ Compared with the LLAVA's text answers above, we can see that the changes of col
 | **17-24** | 10 Total | 12 Visible | 10 Fingers | 10 Fingers | 4 Visible | 10 Visible | 4 Extended | 10 (2 Hands)|
 | **25-32** | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 4 Fingers | 5 Fingers | 5 Fingers | 4 Extended |
 | **33-40** | 5 Fingers | 4 Fingers | 10 (Clasped)| 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers | 5 Fingers |
+
+
+3. Trace across layers (and submodules when the model has multiple parts). For multi-branch systems like LLaVA, separately inspect the vision tower and the vision-language backbone to localize which component fails to preserve the relevant structure.<br>
+
+LLAVA has a 3-crop process in vision tower (Image 1,2,3 are all from the 1th hand picture, Image 4,5,6 are all from the 2nd hand picture, ...). The image below is the visualization results of the last layer of vision tower. We can see that even the output of vision tower doesn't have significant colour changes relevant with the numbers of the fingers. <br>
+<img width="3549" height="6680" alt="image" src="https://github.com/user-attachments/assets/47e1c945-afed-4c55-82f6-29452f97d6bb" />
+<br>
+
+
+
 
 
 
