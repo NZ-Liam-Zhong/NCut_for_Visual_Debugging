@@ -124,11 +124,12 @@ Ground Truth<br>
 It's very hard for humans to infer what's happening in this particular failure robot trajrctory executed by OpenVLA-7b-Spatial. But you can see from the visaulization results that the semantic information of the bowl and the plate are alike. So, when the robot arm fail to grasp the bowl, it tries to grasp the plate instead of going back to grasp the bowl. <br>
 
 
-<video src="side_by_side_1.mp4" controls="true" style="max-width: 100%;">
-  press <a href="side_by_side_1.mp4"> to download </a>。
+
+
+
+<video src="https://github.com/user-attachments/assets/30630d0c-e22b-43dc-9c1f-1f8a46cfdfc8" controls="true" style="max-width: 100%;">
+  Can't play the video in you browser
 </video>
-
-
 
 
 
