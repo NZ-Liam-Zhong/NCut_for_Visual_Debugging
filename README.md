@@ -90,13 +90,15 @@ LLAVA has a 3-crop process in vision tower (Image 1,2,3 are all from the 1th han
 <img width="3588" height="6771" alt="image" src="https://github.com/user-attachments/assets/28a7dc97-93c9-429d-89a6-4d82803dd984" /><br>
 
 
-## Other Example
+## Other Example 1
 Input Image<br>
 <img width="2688" height="1680" alt="image" src="https://github.com/user-attachments/assets/499dafe1-d12f-4724-a4ae-a86cfcc75462" />
 <br>
 
 Most Related Feature<br>
-
+The Visualization of Last Layer of Vision Encoder:<br>
+<img width="3588" height="6771" alt="image" src="https://github.com/user-attachments/assets/359b7d36-122f-482e-b28c-a8759fb7ab48" /><br>
+We can't see any clear information about the number of fingers. So it means it's quite hard for the downstream layers to get this kind of information. <br>
 
 
 LLAVA prediction<br>
@@ -116,6 +118,13 @@ Ground Truth<br>
 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 |
 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 |
+
+## Other Example 2
+
+
+
+
+https://github.com/user-attachments/assets/09af8a11-9b10-463f-9267-f0520d5de038
 
 
 
